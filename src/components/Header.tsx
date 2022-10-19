@@ -19,19 +19,3 @@ const Header = (props: Props) => {
 }
 
 export default Header;
-
-      {/* <Link className="item" to={"/"}>
-        Home
-      </Link>
-      <Link className="item" to={"/streams/new"}>
-        Create
-      </Link>
-      <Link className="item" to={"/streams/delete"}>
-        Delete
-      </Link>
-      <Link className="item" to={"/streams/edit"}>
-        Edit
-      </Link>
-      <Link className="item" to={"/streams/show"}>
-        Show
-      </Link> */}
