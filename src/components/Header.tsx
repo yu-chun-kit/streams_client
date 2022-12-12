@@ -1,7 +1,8 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
+import GoogleAuth from "./GoogleAuth";
 
-type Props = {}
+type Props = {};
 
 const Header = (props: Props) => {
   return (
@@ -9,13 +10,14 @@ const Header = (props: Props) => {
       <Link to={"/"} className="item">
         Streamy
       </Link>
-      <div className='right menu'>
-        <Link to="/" className='item'>
+      <div className="right menu">
+        <Link to="/" className="item">
           All Streams
         </Link>
+        <GoogleAuth />
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Header;
