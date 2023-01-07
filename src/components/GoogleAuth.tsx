@@ -9,7 +9,10 @@ const GoogleAuth = (props: Props) => {
         clientId: "YOUR_CLIENT_ID",
         scope: "email",
         plugin_name: "streamy",
-      });
+      }).then(() => {
+        const auth = window!.gapi.auth2.getAuthInstance();
+        console.log(auth.isSignedIn.get());
+      })
     });
   }, []);
 
