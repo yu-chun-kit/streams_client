@@ -15,8 +15,12 @@ const StreamList = (props: any) => {
     if (stream.userId === props.currentUserId) {
       return (
         <div className="right floated content">
-          <button className="ui button primary">Edit</button>
-          <button className="ui button negative">Delete</button>
+          <Link to={`/streams/edit/${stream.id}`} className="ui button primary">
+            Edit
+          </Link>
+          <Link to={`/streams/delete/${stream.id}`} className="ui button negative">
+            Delete
+          </Link>
         </div>
       );
     }
@@ -38,7 +42,7 @@ const StreamList = (props: any) => {
   };
 
   const renderCreate = () => {
-    // if (props.isSignedIn) {
+    if (props.isSignedIn) {
       return (
         <div style={{ textAlign: "right" }}>
           <Link to="/streams/new" className="ui button primary">
@@ -46,13 +50,7 @@ const StreamList = (props: any) => {
           </Link>
         </div>
       );
-    // }
-
-    // return (
-    //   <div style={{ textAlign: "right" }}>
-    //     <button className="ui button primary">Create Stream</button>
-    //   </div>
-    // );
+    }
   };
 
   return (
